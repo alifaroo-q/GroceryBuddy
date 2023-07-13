@@ -1,6 +1,9 @@
 import {createContext, useState} from 'react';
+import {ToastAndroid} from 'react-native';
 
 import axios from 'axios';
+
+const BASE_URL = 'http://192.168.0.103:8080';
 
 export const ProductContext = createContext({
   product: {},
@@ -30,7 +33,7 @@ export const ProductProvider = ({children}) => {
     });
 
     axios
-      .post(`http://192.168.0.103:8080/detect-${keyword}`, image, {
+      .post(`${BASE_URL}/detect-${keyword}`, image, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Accept: 'application/json',
@@ -40,7 +43,7 @@ export const ProductProvider = ({children}) => {
         setProduct(res.data);
       })
       .catch(err => {
-        console.log(err);
+        ToastAndroid.show(err.message, ToastAndroid.LONG);
       })
       .finally(() => {
         setIsLoading(false);

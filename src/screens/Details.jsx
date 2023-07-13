@@ -1,5 +1,6 @@
 import {View, Text} from 'react-native';
 import React, {useContext} from 'react';
+
 import {ProductContext} from '../contexts/ProductContext';
 
 const Details = () => {
@@ -59,8 +60,6 @@ const Details = () => {
       );
       break;
   }
-
-  console.log(product);
 
   return (
     <View>

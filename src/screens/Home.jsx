@@ -1,8 +1,10 @@
 import React, {useContext} from 'react';
 import {Text, View, StatusBar} from 'react-native';
+
 import CartIcon from '../icons/cart.svg';
 import BagIcon from '../icons/bag.svg';
 import Button from '../components/Button';
+
 import {ProductContext} from '../contexts/ProductContext';
 
 const Home = ({navigation}) => {
@@ -16,7 +18,7 @@ const Home = ({navigation}) => {
   return (
     <>
       <StatusBar hidden />
-      <View className="flex-1 bg-blue-200 w-full" style={{padding: 15}}>
+      <View className="flex-1 bg-blue-300 w-full" style={{padding: 15}}>
         <View
           className="flex flex-row justify-end"
           style={{paddingHorizontal: 10, paddingVertical: 10}}>

@@ -3,8 +3,9 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import Home from './src/screens/Home';
 import Details from './src/screens/Details';
-import {ProductProvider} from './src/contexts/ProductContext';
 import ImagePicker from './src/screens/ImagePicker';
+
+import {ProductProvider} from './src/contexts/ProductContext';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,7 +20,11 @@ const App = () => {
             component={Home}
           />
           <Stack.Screen name="Details" component={Details} />
-          <Stack.Screen name="ImagePicker" component={ImagePicker} />
+          <Stack.Screen
+            name="ImagePicker"
+            component={ImagePicker}
+            options={{title: 'Image Picker'}}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </ProductProvider>

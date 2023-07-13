@@ -1,9 +1,9 @@
+import React, {useContext} from 'react';
 import {View} from 'react-native';
-import Button from '../components/Button';
-import React from 'react';
 import imagePicker from 'react-native-image-crop-picker';
+
 import {ProductContext} from '../contexts/ProductContext';
-import {useContext} from 'react';
+import Button from '../components/Button';
 
 const ImagePicker = ({navigation}) => {
   const {getProduct} = useContext(ProductContext);
@@ -19,8 +19,7 @@ const ImagePicker = ({navigation}) => {
         getProduct(image);
         navigation.navigate('Details');
       })
-      .catch(err => {
-        console.log({message: 'Something went wrong', err});
+      .catch(() => {
         navigation.navigate('Home');
       });
   };
@@ -36,8 +35,7 @@ const ImagePicker = ({navigation}) => {
         getProduct(image);
         navigation.navigate('Details');
       })
-      .catch(err => {
-        console.log({message: 'Something went wrong', err});
+      .catch(() => {
         navigation.navigate('Home');
       });
   };
