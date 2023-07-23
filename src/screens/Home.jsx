@@ -18,7 +18,7 @@ const Home = ({navigation}) => {
   return (
     <>
       <StatusBar hidden />
-      <View className="flex-1 bg-[#9ecaf7] w-full" style={{padding: 15}}>
+      <View className="flex-1 bg-[#9ecaf7] w-full" style={{padding: 20}}>
         <View
           className="flex flex-row justify-end"
           style={{paddingHorizontal: 10, paddingVertical: 10}}>
@@ -46,7 +46,7 @@ const Home = ({navigation}) => {
               />
             </View>
           </View>
-          <View className="flex flex-col items-center">
+          <View style={{marginTop: 10}} className="flex flex-col items-center">
             <Text className="text-sm text-black">BY JOĀO MOTA</Text>
           </View>
         </View>

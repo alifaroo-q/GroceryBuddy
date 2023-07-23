@@ -7,16 +7,16 @@ import ImagePicker from './src/screens/ImagePicker';
 
 import {ProductProvider} from './src/contexts/ProductContext';
 
-import { LogBox } from 'react-native'; 
+import {LogBox} from 'react-native';
+import {useEffect} from 'react';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  
   useEffect(() => {
-    LogBox.ignoreAllLogs(true)
-  }, [])
- 
+    LogBox.ignoreAllLogs(true);
+  }, []);
+
   return (
     <ProductProvider>
       <NavigationContainer initialRouteName="Home">
