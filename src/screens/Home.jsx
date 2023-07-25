@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import {Text, View, StatusBar, Image} from 'react-native';
 
-import CartIcon from '../icons/cart.svg';
 import heroImage from '../icons/cover.jpg';
-import Button from '../components/Button';
+import CartIcon from '../icons/cart.png';
 
+import Button from '../components/Button';
 import {ProductContext} from '../contexts/ProductContext';
 
 const Home = ({navigation}) => {
@@ -22,7 +22,7 @@ const Home = ({navigation}) => {
         <View
           className="flex flex-row justify-end"
           style={{paddingHorizontal: 10, paddingVertical: 10}}>
-          <CartIcon width={40} height={40} />
+          <Image source={CartIcon} height={70} width={70} />
         </View>
         <View className="flex-1 flex-col justify-evenly items-center w-full">
           <Image className=" w-3/4 h-2/6" source={heroImage} />
